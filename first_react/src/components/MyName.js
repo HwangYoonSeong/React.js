@@ -1,8 +1,8 @@
 import React from 'react';
-
+import '../App.css'
 const MyName = ({ name }) => {
     return (
-        <div>
+        <div className="App">
             Hello! This is {name}.
         </div>
     );

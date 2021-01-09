@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import '../App.css'
 const Problematic = () => {
     throw (new Error('버그가 나타났다!'));
     return (
@@ -27,9 +27,17 @@ class Counter extends Component {
             })
         );
     }
+
+    componentDidCatch (error, info) {
+        this.setState({
+            error: true
+        });
+    }
     render () {
+        if (this.state.error) return (<h1>Error</h1>);
+
         return (
-            <div>
+            <div className="default">
                 <h1>카운터</h1>
                 <div>값: {this.state.number}</div>
                 { this.state.number === 4 && <Problematic />}
