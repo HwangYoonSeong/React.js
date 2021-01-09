@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Problematic from './Problematic';
 import '../App.css'
 class Counter extends Component {
     state = {
@@ -55,6 +56,15 @@ class Counter extends Component {
             <div className="default">
                 <h1>카운터</h1>
                 <div>값: {this.state.number}</div>
+                { this.state.number === 4 && <Problematic />}
+                {/* import React, { Component} from 'react';
+                    import '../App.css'
+                    const Problematic = () => {
+                        throw (new Error('There is Bug!'));
+                        return (<div></div>); //Unreachable Code
+                    };
+
+                    export default Counter; */}
                 <button onClick={this.handleIncrease}>+</button>
                 <button onClick={this.handleDecrease}>-</button>
             </div>
