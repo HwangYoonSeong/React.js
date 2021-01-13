@@ -24,16 +24,20 @@ class PhoneForm extends Component {
     }
 
     render () {
+        const style = {
+
+            marginRight: '20px'
+        };
         return (
-            <form onSubmit={this.handleSubmit} className="default">
-                <input
+            <form onSubmit={this.handleSubmit} className="default" >
+                <input style={style}
                     placeholder="Name"
                     value={this.state.name}
                     onChange={this.handleChange}
                     name="name"
                 />
 
-                <input
+                <input style={style}
                     placeholder="PhoneNum"
                     value={this.state.phone}
                     onChange={this.handleChange}
