@@ -1,12 +1,18 @@
 import React from 'react';
 import './TodoListTemplate.css';
 
-const TodoListTemplate = ({ form, children }) => {
+const TodoListTemplate = ({ form, palette, children }) => {
     return (
         <main className="todo-list-template">
+
             <div className="title">
                 <b>Todo List</b>
             </div>
+
+            <section className="palette-wrapper">
+                {palette}
+            </section>
+
             <section className="form-wrapper">
                 {form}
             </section>
@@ -18,3 +24,5 @@ const TodoListTemplate = ({ form, children }) => {
 };
 
 export default TodoListTemplate;
+
+

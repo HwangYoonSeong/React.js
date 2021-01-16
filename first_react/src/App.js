@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TodoListTemplate from './TodoListComp/TodoListTemplate';
 import Form from './TodoListComp/Form';
 import TodoItemList from './TodoListComp/TodoItemList';
+import Palette from './TodoListComp/Palette';
 
 class App extends Component {
 
@@ -82,14 +83,20 @@ class App extends Component {
                 value={input}
                 onKeyPress={handleKeyPress}
                 onChange={handleChange}
-                onCreate={handleCreate} />}>
+                onCreate={handleCreate} />}
+
+                palette={<Palette color={['#343a40', '#f03e3e', '#12b886', '#228ae6']} />}>
+
+
 
                 <TodoItemList todos={todos}
                     onToggle={handleToggle}
                     onRemove={handleRemove} />
+
             </TodoListTemplate>
         );
     }
 }
 
 export default App;
+

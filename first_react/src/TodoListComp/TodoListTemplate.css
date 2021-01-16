@@ -24,3 +24,10 @@
   .todos-wrapper {
     min-height: 5rem;
   }
+
+  
+  .palette-wrapper {
+    min-height: 4rem;
+    background-color:rgb(236, 234, 234);
+     
+  }

@@ -1,0 +1,9 @@
+.palette {
+    display: flex;
+     
+  }
+
+.colorRec{
+    width: 20px;
+    height: 20px;
+}
