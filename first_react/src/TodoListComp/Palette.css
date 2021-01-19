@@ -1,9 +1,27 @@
 .palette {
     display: flex;
-     
+    justify-content: center;
+    
+    
   }
 
 .colorRec{
-    width: 20px;
-    height: 20px;
+    margin-top: 15px; 
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.5;
+    /* transition: all 0.2s; */
+    cursor: pointer;
 }
+
+.colorRec:hover {
+    opacity: 0.75;
+  }
+  
+  .colorRec.active, .color:active {
+    opacity: 1;
+  }
+  
+  .colorRec + .colorRec {
+    margin-left: 1rem;
+  }

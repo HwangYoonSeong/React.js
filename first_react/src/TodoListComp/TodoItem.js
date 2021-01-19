@@ -6,8 +6,9 @@ class TodoItem extends Component {
         return this.props.checked !== nextProps.checked;
     }
     render () {
-        const { text, checked, id, onToggle, onRemove } = this.props;
-        console.log(id);
+        const { text, checked, id, onToggle, onRemove, color } = this.props;
+        //console.log(color);
+        //console.log(id);
         return (
             <div className="todo-item" onClick={() => onToggle(id)}>
                 <div className="remove" onClick={(e) => {
@@ -16,8 +17,9 @@ class TodoItem extends Component {
                 }
                 }>&times;</div>
                 {/* css를 유동적으로 사용하기 위한 방법 */}
-                <div className={`todo-text ${checked && 'checked'}`}>
-                    <div>{text}</div>
+                <div className={`todo-text ${checked && 'checked'}`}
+                >
+                    <div style={{ color: color }}>{text}</div>
                 </div>
                 {
                     checked && (<div className="check-mark">✓</div>)
