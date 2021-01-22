@@ -5,3 +5,7 @@ Learn React.js
 * conecept
 * Phone-Book tutorial
 * toDoList 
+* Styling
+    * Sass
+    * CSS module
+    * styled-components
