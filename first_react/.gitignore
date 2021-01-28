@@ -10,8 +10,8 @@ debug.log
 # testing
 /coverage
 
-# production
 /build
+# production
 
 # misc
 .DS_Store
