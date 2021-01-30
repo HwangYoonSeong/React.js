@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import SassComponent from "./StylingComp/SassComponent";
-import CSSModule from './StylingComp/CSSModule';
-import StyledComponent from './StylingComp/StyledComponent';
+import SassComponent from "./Components/StylingComp/SassComponent";
+import CSSModule from './Components/StylingComp/CSSModule';
+import StyledComponent from './Components/StylingComp/StyledComponent';
 class App extends Component {
     render () {
         return (

@@ -1,11 +1,11 @@
 //import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
-import MyName from './PhoneBookComp/MyName';
+import MyName from './Components/PhoneBookComp/MyName';
 //import Counter from './components/Counter';
 //import Problematic from './components/Problematic';
-import PhoneForm from './PhoneBookComp/PhoneFrom';
-import PhoneInfoList from './PhoneBookComp/PhoneInfoList';
+import PhoneForm from './Components/PhoneBookComp/PhoneFrom';
+import PhoneInfoList from './Components/PhoneBookComp/PhoneInfoList';
 class App extends Component {
   id = 2;
   state = {

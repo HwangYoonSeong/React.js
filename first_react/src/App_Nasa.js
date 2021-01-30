@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ViewerTemplate from './NasaComp/ViewerTemplate';
-import SpaceNavigator from './NasaComp/SpaceNavigator';
-import Viewer from './NasaComp/Viewer';
+import ViewerTemplate from './Components/NasaComp/ViewerTemplate';
+import SpaceNavigator from './Components/NasaComp/SpaceNavigator';
+import Viewer from './Components/NasaComp/Viewer';
 import moment from 'moment';
 import * as api from './lib/api'
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import TodoListTemplate from './TodoListComp/TodoListTemplate';
-import Form from './TodoListComp/Form';
-import TodoItemList from './TodoListComp/TodoItemList';
-import Palette from './TodoListComp/Palette';
+import TodoListTemplate from './Components/TodoListComp/TodoListTemplate';
+import Form from './Components/TodoListComp/Form';
+import TodoItemList from './Components/TodoListComp/TodoItemList';
+import Palette from './Components/TodoListComp/Palette';
 
 class App extends Component {
 
