@@ -1,11 +1,11 @@
 import React from 'react';
 //import './AppTemplate.css';
 
-const AppTemplate = ({ counter }) => {
+const AppTemplate = ({ counter, todos }) => {
     return (
         <div className="app-template">
             <div className="counter">{counter}</div>
-            {/* <div className="todos">{todos}</div> */}
+            <div className="todos">{todos}</div>
         </div>
     );
 };
