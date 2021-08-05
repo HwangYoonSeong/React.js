@@ -7,6 +7,36 @@ import axios from 'axios';
 
 import { Link, Route, Switch } from 'react-router-dom';
 
+// const SubTitle = styled.h3`
+//     font-size: 3rem;
+//     font-weight:600;
+//     position:relative;
+//     display: inline-block;
+//     height: 80px;
+//     width:850px; 
+//     overflow: hidden;
+//     animation: ${typingAni} 4s steps(30, end) 1;
+
+//     &:after{
+//         position:absolute; 
+//         display:block;
+//         content:""; 
+//         width: 30px; 
+//         height: 50px;
+//         top : 15px;
+//         right:0; 
+//         border-right: 5px solid #fff;
+//         animation: ${cursor} 0.5s infinite;
+//     }
+
+//     @media(min-width:540px) and (max-width: 994px){
+//         font-size: 2rem;   
+//     }
+//     @media(max-width:540px){
+//         font-size: 1.3rem;
+//     }
+
+// `;
 const Card = (props) => {
   return (
     <div className="col-md-4">

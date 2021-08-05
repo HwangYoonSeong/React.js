@@ -19,7 +19,7 @@ class Counter extends Component {
         console.log('componentDidMount');
     }
 
-    shouldComponentUpdate (nextProps, nextState) {
+    shouldComponentUpdate (nextProps, nextState) { 
         // 5 의 배수라면 리렌더링 하지 않음
         console.log('shouldComponentUpdate');
         if (nextState.number % 5 === 0) return false;
