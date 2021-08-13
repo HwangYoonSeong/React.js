@@ -1,6 +1,28 @@
-import React from 'react';
+import React, { useRef, useContext, useCallback } from 'react';
+import { UserDispatch } from '../../App_velopert';
+import useInputs from '../../Hooks/useInput';
+function CreateUser () {
+    const dispatch = useContext(UserDispatch);
+    const [{ username, email }, onChange, reset] = useInputs({
+        username: '',
+        email: ''
+    });
+    const nextId = useRef(4);
 
-function CreateUser ({ username, email, onChange, onCreate }) {
+    // dispatch 함수는 useCallback을 통한 재사용이 불필요한가? 
+    const onCreate = useCallback(() => {
+        dispatch({
+            type: 'CREATE_USER',
+            user: {
+                id: nextId.current,
+                username,
+                email
+            }
+        });
+        reset();
+        nextId.current += 1;
+    }, [username, email, reset, dispatch]);
+
     return (
         <div>
             <input

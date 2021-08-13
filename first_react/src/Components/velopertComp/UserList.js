@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import { UserDispatch } from '../../App_velopert';
 
-
-const User = React.memo(function User ({ user, onRemove, onToggle }) {
-
+const User = React.memo(function User ({ user }) {
+    const dispatch = useContext(UserDispatch);
     const [number, setNumber] = useState(0);
 
     const onIncrease = () => {
@@ -23,24 +23,21 @@ const User = React.memo(function User ({ user, onRemove, onToggle }) {
         };
     }, [user]);
 
-
-
     return (
         <div>
-
             <b
                 style={{
                     cursor: 'pointer',
                     color: user.active ? 'green' : 'black'
                 }}
 
-                onClick={() => onToggle(user.id)}
+                onClick={() => { dispatch({ type: 'TOGGLE_USER', id: user.id }); }}
             >
                 {user.username}
             </b>
-
+            &nbsp; &nbsp;
             <span>({user.email})</span>
-            <button onClick={() => onRemove(user.id)}>삭제</button>
+            <button onClick={() => { dispatch({ type: 'REMOVE_USER', id: user.id }); }}>삭제</button>
 
             <span><b style={{
                 marginLeft: 20
@@ -53,12 +50,15 @@ const User = React.memo(function User ({ user, onRemove, onToggle }) {
 })
 
 
-function UserList ({ users, onRemove, onToggle }) {
+function UserList ({ users }) {
     return (
         <div>
 
             {users.map(user => (
-                <User user={user} key={user.id} onRemove={onRemove} onToggle={onToggle} />
+                <User
+                    user={user}
+                    key={user.id}
+                />
             ))}
         </div>
     );
